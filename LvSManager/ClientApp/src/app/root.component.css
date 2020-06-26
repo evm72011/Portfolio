@@ -1,0 +1,271 @@
+:root {
+    margin: 0;
+    font-family: "Lato", sans-serif;
+}
+/*----------------------------------------------------------------------*/
+
+.sidebar {
+    margin: 0;
+    padding: 0;
+    width: 220px;
+    background-color: #f1f1f1;
+    position: fixed;
+    height: 100%;
+    box-shadow: 0 0 10px  gray;
+    font-size: .9em;
+}
+
+.sidebar-header{
+    background-color: rgb(4,125,195);
+    color: white;
+    padding: 1em .5em 4em;
+    width: 100%;
+    border-radius: 0;
+}
+
+.sidebar-header img{
+    float: left;
+    width: 45px;
+}
+
+.sidebar a {
+    display: block;
+    padding: 16px;
+    text-decoration: none;
+    color: black;
+}
+
+.sidebar-header p{
+    float: left;
+    padding-left: .3em;
+    width: calc(100% - 45px);
+    text-transform: uppercase;
+}
+
+.sidebar .logon{
+    border-radius: 0;
+    color: white; 
+    text-align: center;
+}
+
+.logon a{
+    color: white;
+}
+
+.logon ul, .logon hr{
+    margin: 0;
+}
+
+.logon ul a{
+    color: black;
+    text-align: left;
+}
+
+.sidebar .unlogged{
+    background-color: rgb(170,10,10);
+    font-weight: bold;
+    font-size: 1.1em;
+}
+
+.sidebar .unlogged:hover{
+    background-color: rgb(190, 60, 60);
+}
+
+.sidebar .logged{
+    background-color: rgb(4,125,195);
+}
+
+.sidebar .logged:hover{
+    background-color: rgb(4, 140, 219); 
+}
+
+.content-menu-item:hover{
+    background-color: rgb(250, 250, 250);
+} 
+
+.sidebar .dropdown-item{
+    padding-left: 30px;
+}
+
+.bold-font{
+    font-weight: bold;
+}
+
+.sidebar-group-ico{
+    width: 25px;
+    margin: -5px 0 0 0;
+}
+
+.sidebar-footer{
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 220px;
+    color: rgb(4,125,195);;
+    text-align: center;
+    font-size: 10px;
+    padding-bottom: 2em;
+}
+
+.progress{
+    margin: -10px 5px 0 5px;
+    background-color: rgb(245,245,245);
+    height: 5px;
+}
+.progress-bar{
+    height: 3px;
+    background-color: rgb(4,125,195);
+}
+
+/*--------------------------*/
+
+.content {
+    margin-left: 220px;
+}
+
+.content-header{
+    background-color: rgb(238,238,238);
+    color: rgb(100,100,100);
+    height: 50px;
+    padding: 7px 0 0 10px;
+}
+/*
+.content-work{
+    position: absolute;
+    top: 50px;
+    left: 220px;
+    bottom: 0;
+    right: 0;
+    overflow: auto;
+}
+*/
+.content-work2{
+    position: absolute;
+    top: 50px;
+    left: 220px;
+    bottom: 0;
+    right: 0;
+    overflow: auto;
+}
+
+
+.centered{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.disabled
+{
+  pointer-events: none;
+  opacity: 0.5;
+  background: rgb(238,238,238);
+}
+
+.invisible{
+  display: "none"
+}
+
+/*-------------------------------------------*/
+
+.round-button { 
+  position: absolute;
+  bottom:   20px;
+  
+  font-size: 5em; 
+  width: 1em; 
+  height: 1em; 
+  border-radius: 2em; 
+  text-align: center; 
+  padding: 0 0 0 0; 
+      
+  color: #FFFFFF; 
+  display: table-cell; vertical-align: middle;
+  background-color: rgb(4,125,195); 
+  border-color:  rgb(4,125,195); 
+
+  box-shadow: 5px 5px 10px rgba(189,189,189,1);
+  -moz-box-shadow: 5px 5px 10px rgba(189,189,189,1);
+  -webkit-box-shadow: 5px 5px 10px rgba(189,189,189,1);
+  -o-box-shadow: 5px 5px 10px rgba(189,189,189,1);
+} 
+     
+.round-button:active, 
+.round-button.active, 
+.open .dropdown-toggle.round-button { 
+  background-image: none; 
+}
+
+
+.round-button:hover, 
+.round-button:focus, 
+.round-button:active, 
+.round-button.active, 
+.open .dropdown-toggle.round-button { 
+  color: #FFFFFF; 
+  background-color: rgb(4, 140, 219); 
+  border-color:  rgb(4,140,219); 
+} 
+
+.round-button:disabled{
+    background-color: gray; 
+    border-color:  gray; 
+}
+
+.round-button img{
+    width: 60px; 
+    margin-top: -65px;
+}
+
+/*----------------------------------------------------------------------*/
+
+@media screen and (max-width: 700px) {
+  .content-header, .sidebar-footer{
+    visibility: hidden;
+  }
+
+  .sidebar {
+    width: 100%;
+    height: auto;
+    position: relative;
+    float: left;
+    font-size: smaller;
+  }
+
+  .sidebar-header{
+      width: 50%;
+      float: left;
+      padding: 1em;
+      height: 5rem;
+  }
+
+  .logon{
+    width: 50%;
+    float: left;
+  }
+
+  .logon a{
+    width: 100%;
+    height: 5rem;
+}
+
+  .sidebar a {float: left;}
+  div.content {margin-left: 0;}
+}
+
+  
+@media screen and (max-width: 400px) {
+    .content-header, .sidebar-footer{
+        visibility: hidden;
+    }
+
+    .sidebar a {
+        text-align: center;
+        float: none;
+    }
+    .sidebar-header {
+        text-align: center;
+        float: none;
+    }  
+}  

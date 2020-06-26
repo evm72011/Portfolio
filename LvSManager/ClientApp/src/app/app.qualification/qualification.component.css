@@ -1,0 +1,20 @@
+.bold-font{
+    font-weight: bold;
+}
+
+.table-row{
+    line-height: 0.5rem; 
+    min-height: 0.5rem; 
+    height: 0.5rem; 
+    cursor: pointer;
+    line-height: 100%;
+}
+
+.selected {
+    background-color: lightblue;
+}
+
+table
+{
+    table-layout: fixed;
+}

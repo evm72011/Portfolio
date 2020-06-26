@@ -1,0 +1,62 @@
+<form novalidate #authForm="ngForm" class="m-3" autocomplete="off" (keydown)="onKeyDown($event)">
+  <div class="wrapper fadeInDown" style="font-size: .8em;">
+    <div id="formContent">
+      <div class="container-fluid pt-3">
+        <div class="row mt-2">
+          <div class="col caption">
+            <h4 class="caption">Alarmierung</h4> 
+          </div>
+        </div>
+        <div class="row mt-1">
+          <div class="col">
+            <label for="alertTimeUtc">Breite</label>
+            <input type="text" id="alertTimeUtc" class="form-control" name="alertTimeUtc" [(ngModel)]="Telegram.wherePosition.latitude">
+          </div>
+        </div>
+        <div class="row mt-1">
+          <div class="col">
+            <label for="expiryTimestampUtc">Länge</label>
+            <input type="text" id="expiryTimestampUtc" class="form-control" name="expiryTimestampUtc" [(ngModel)]="Telegram.wherePosition.longitude">
+          </div>
+        </div>
+        <div class="row mt-1">
+          <div class="col">
+            <label for="alertColor">Alarmfarbe</label>
+            <input type="color" id="alertColor" class="form-control" name="alertColor" [(ngModel)]="AlertColor">
+          </div>
+        </div>
+        <div class="row mt-1 mb-3">
+          <div class="col">
+            <label for="alertText">Alarmtext</label>
+            <input type="text" id="alertText" class="form-control" name="alertText" [(ngModel)]="Telegram.alertText" required>
+          </div>
+        </div>
+<!--
+        <div class="row mt-3" style="padding-left: 1em;">
+          <div class="col custom-control custom-checkbox">
+            <input class="custom-control-input" type="checkbox" value="" name="isTrigger" id="isTrigger"  [(ngModel)]="Telegram.isTrigger" (change)="CheckboxChanged()">
+            <label class="custom-control-label" for="isTrigger">
+                LvS Displays mit alarmieren
+            </label>
+          </div>
+        </div>
+        <div class="row mt-1 mb-3">
+          <div class="col">
+            <label for="password">Passwort</label>
+            <input type="password" id="password" class="form-control" name="password" [(ngModel)]="Password" [disabled]="!Telegram.isTrigger">
+          </div>
+        </div>          
+-->        
+
+        <div class="row mt-1"  id="formFooter">
+          <div class="col-sm-6 mt-3">
+            <input type="button" class="fadeIn third" value="Erstellen" [disabled]="!Telegram.alertText" (click)="CloseForm(true)">
+          </div>
+          <div class="col-sm-6 mt-3">
+            <input type="button" class="fadeIn third" value="Abbrechen" (click)="CloseForm(false)">
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</form>

@@ -1,0 +1,34 @@
+<form novalidate #authForm="ngForm" class="m-3" autocomplete="off" (keydown)="onKeyDown($event)" >
+    <div class="wrapper fadeInDown">
+        <div id="formContent">
+            <div class="fadeIn first mt-3">
+                <img src="../../assets/login.png" id="icon" alt="User Icon"/>
+            </div>
+            <div class="container-fluid pt-3">
+                <div class="row">
+                    <div class="col">
+                        <input type="text" id="clientIdentity" class="fadeIn first" name="clientIdentity" placeholder="Mandantenidentität" [(ngModel)]="session.cloudLogOnData.clientIdentity" required>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col">
+                        <input type="text" id="userLogOnName" class="fadeIn second" name="userLogOnName" placeholder="Anmeldenane" [(ngModel)]="session.cloudLogOnData.userLogOnName" required>
+                    </div>
+                </div>
+                <div class="row mb-3">
+                    <div class="col">
+                        <input type="password" id="userPassword" class="fadeIn third" name="userPassword" placeholder="Passwort" [(ngModel)]="session.cloudLogOnData.userPassword" required autofocus autocomplete="off" value="">
+                    </div>
+                </div>
+                <div class="row"  id="formFooter">
+                    <div class="col-sm-6 mt-3">
+                        <input type="button" class="fadeIn fourth" value="Anmelden" [disabled]="authForm.invalid" (click)="CloseForm(true)">
+                    </div>
+                    <div class="col-sm-6 mt-3">
+                        <input type="button" class="fadeIn fourth" value="Abbrechen" (click)="CloseForm(false)">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</form>

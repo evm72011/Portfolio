@@ -1,0 +1,6 @@
+**/.vs
+
+Patterns/**/bin
+Patterns/**/obj
+
+Aufgabe/**/obj

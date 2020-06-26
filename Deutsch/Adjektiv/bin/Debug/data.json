@@ -1,0 +1,9 @@
+{
+  "Noun": {
+    "Masculine": ["Löffel", "Hund", "Schrank", "Tisch", "Stuhl", "Herd", "Computer"],
+    "Feminine": ["Gabel", "Katze", "Seite", "Tasche", "Wand", "Tasse", "Auge", "Lippe"],
+    "Neuter": ["Messer", "Mädchen", "Kind", "Buch", "Wort", "Handy", "Büro"],
+    "Plural": ["Tassen", "Kinder", "Bücher", "Wörter", "Augen", "Lampen"]
+  },
+  "Adjective": ["klein", "groß", "alt", "neu", "lang", "kurz", "hall", "sauber"]
+}

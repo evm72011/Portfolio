@@ -1,0 +1,66 @@
+<nav class="navbar navbar-expand-lg navbar-light border fadeInDown"> 
+
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+  
+    <div class="collapse navbar-collapse" id="navbarSupportedContent" >
+      <ul class="navbar-nav mr-auto">
+        <li>
+            <div class="form-inline my-2 my-lg-0">
+                <input class="form-control form-control-sm mr-sm-2" type="search" placeholder="Geräteliste durchsuchen" aria-label="Search" [(ngModel)]="deviceRepository.filter.searchText" style="width: 15em;">
+                <input class="form-control form-control-sm mr-sm-2" type="search" placeholder="Gruppen durchsuchen" aria-label="Search" [(ngModel)]="groupRepository.filter.name" style="width: 15em;">
+                <button class="btn btn-outline-success btn-sm my-2 my-sm-0" type="button" (click)="GetData()">Suchen</button>
+                <button class="btn btn-outline-secondary btn-sm my-2 my-sm-0 ml-1" type="button" (click)="ClearFilter()">Klären</button>
+            </div>
+        </li>
+     </ul>
+    </div>
+</nav>
+
+<table class="fixed fadeInDown">
+  <tr>
+    <td><div class="column-devices"></div></td>
+    <td *ngFor="let group of groupRepository.Data" class="edit-button" (click)=EditGroup(group)>
+      <div class="row-groups">
+        {{group.name}}
+      </div>
+    </td>
+  </tr>
+  <tr>
+    <td class="datarow">
+      <div class="column-devices">
+        Wählen alles
+      </div>
+    </td>
+    <td *ngFor="let group of groupRepository.Data" class="datarow">
+      <div class="data-cell" (click)="SelectAll(group)">
+        <img src="../../assets/select-all.png" class="select-button" alt="User Icon" title="Wählen alles"/>
+      </div>
+    </td>
+  </tr>
+  <tr>
+    <td class="datarow">
+      <div class="column-devices">
+        Wählen nichts
+      </div>
+    </td>
+    <td *ngFor="let group of groupRepository.Data" class="datarow">
+      <div class="data-cell" (click)="SelectNone(group)">
+        <img src="../../assets/select-none.png" class="select-button" alt="User Icon" title="Wählen nichts"/>
+      </div>
+    </td>
+  </tr>
+  <tr *ngFor="let device of deviceRepository.Data">
+      <td class="datarow edit-button" (click)=EditDevice(device)>
+        <div class="column-devices">
+          {{device.name}}
+        </div>
+      </td>
+      <td class="datarow" *ngFor="let group of groupRepository.Data" >
+        <div class="data-cell">
+            <button type="button" class="btn btn-sm btn-block" [ngClass]="mapClassLinkButton(group, device)" (click)="ChangeLink(group, device)"></button>  
+        </div>
+      </td>
+  </tr>
+</table>

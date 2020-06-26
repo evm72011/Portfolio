@@ -1,0 +1,36 @@
+.card-header {
+    padding: 0;
+    height: 25px;
+}
+
+.card-body {
+    padding: 0;
+}
+
+.description {
+    height: 7em;
+}
+
+.information{
+    font-size: smaller;
+}
+
+.card-button{
+    height: 25px;
+    font-size: 1.2em;
+    font-weight: bold;
+    padding: 0;
+}
+
+/* Chrome, Safari, Edge, Opera */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* Firefox */
+input[type=number] {
+  -moz-appearance:textfield;
+}
+

@@ -1,0 +1,7 @@
+C:\Cloud@mail.ru\Home\Programs\.NET\Portfolio\Deutsch\Adjektiv\bin\Debug\Adjektiv.exe.config
+C:\Cloud@mail.ru\Home\Programs\.NET\Portfolio\Deutsch\Adjektiv\bin\Debug\Adjektiv.exe
+C:\Cloud@mail.ru\Home\Programs\.NET\Portfolio\Deutsch\Adjektiv\bin\Debug\Adjektiv.pdb
+C:\Cloud@mail.ru\Home\Programs\.NET\Portfolio\Deutsch\Adjektiv\obj\Debug\Adjektiv.csprojAssemblyReference.cache
+C:\Cloud@mail.ru\Home\Programs\.NET\Portfolio\Deutsch\Adjektiv\obj\Debug\Adjektiv.csproj.CoreCompileInputs.cache
+C:\Cloud@mail.ru\Home\Programs\.NET\Portfolio\Deutsch\Adjektiv\obj\Debug\Adjektiv.exe
+C:\Cloud@mail.ru\Home\Programs\.NET\Portfolio\Deutsch\Adjektiv\obj\Debug\Adjektiv.pdb
