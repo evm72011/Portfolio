@@ -1,6 +1,12 @@
 **/.vs
 
+Aufgabe/**/obj
+
+Blockchain/*.rar
+Blockchain/**/obj
+Blockchain/**/bin
+
 Patterns/**/bin
 Patterns/**/obj
 
-Aufgabe/**/obj
+
